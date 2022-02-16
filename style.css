@@ -30,6 +30,9 @@ img[src*="car"] {
 img[src*="stroller"] {
   width: 400px;
   height: auto;
+  box-shadow: 2px 2px;
+  filter: drop-shadow(2px 1px 1px white);
+  border: 1px solid white;
 }
 
 .header {
@@ -69,6 +72,8 @@ a {
   padding-left: 150px;
   padding-right: 150px;
   gap: 16px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
 }
 
 .container-1 {
@@ -76,6 +81,7 @@ a {
   width: 400px;
   flex-direction: column;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .welcome-title {
@@ -111,13 +117,20 @@ a {
   gap: 20px;
   padding: 50px;
   justify-content: center;
-  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+
+.info {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
 }
 
 .quote-box {
   display: flex;
   flex-direction: column;
   background-color: lightgray;
+  flex-wrap: nowrap;
 }
 
 .quote-content {
@@ -125,8 +138,10 @@ a {
   flex-direction: column;
   justify-content: center;
   align-self: center;
-  height: 200px;
-  width: 800px;
+  margin-left: 15em;
+  margin-right: 15em;
+  margin-top: 2em;
+  margin-bottom: 2em;
   font: 36px;
   font-style: italic;
   color: #1f2937;
